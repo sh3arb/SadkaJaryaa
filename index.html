@@ -3,97 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صدقة جارية عن روح المرحوم محمود</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
-    
+    <title>صدقة جارية | محمود</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;900&display=swap" rel="stylesheet">
     <style>
+        :root { --gold: #d4af37; --dark: #0f0f0f; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
 
         body {
-            background: url('https://images.unsplash.com/photo-1591501539219-548cb45e99db?q=100&w=2560&auto=format&fit=crop') no-repeat center center fixed;
+            background: url('https://images.unsplash.com/photo-1591501539219-548cb45e99db?q=100&w=2560') no-repeat center center fixed;
             background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
         }
 
-        .premium-card {
-            background: rgba(15, 15, 15, 0.85);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(212, 175, 55, 0.8);
-            border-radius: 28px;
-            padding: 40px 25px;
+        .container {
+            background: rgba(15, 15, 15, 0.9);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--gold);
+            border-radius: 40px;
+            padding: 50px 30px;
             text-align: center;
-            max-width: 410px;
             width: 100%;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.9);
-            animation: fadeIn 1s ease-out;
+            max-width: 450px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.8), 0 0 20px rgba(212, 175, 55, 0.2);
+            animation: appear 1.2s ease;
         }
 
-        .image-container {
-            width: 160px; height: 160px; margin: 0 auto 25px auto;
-            border-radius: 50%; border: 4px solid #d4af37;
-            box-shadow: 0 0 25px rgba(212, 175, 55, 0.6);
-            overflow: hidden; background: #1a1a1a;
-        }
-        .image-container img { width: 100%; height: 100%; object-fit: cover; }
-
-        .main-title { color: #d4af37; font-size: 28px; font-weight: 900; margin-bottom: 5px; }
-        .sub-title { color: #ffffff; font-size: 17px; margin-bottom: 25px; }
-
-        .dua-container { background: rgba(0, 0, 0, 0.4); border-radius: 18px; padding: 20px; margin-bottom: 25px; border: 1px solid rgba(212, 175, 55, 0.2); }
-        .dua-text { color: #ffffff; font-size: 19px; line-height: 1.7; font-weight: 600; }
-
-        .advanced-btn {
-            background: linear-gradient(135deg, #aa7c11 0%, #d4af37 50%, #f3e5ab 100%);
-            color: #111; border: none; width: 100%; padding: 16px; border-radius: 16px;
-            font-size: 19px; font-weight: 800; cursor: pointer; transition: 0.3s;
+        .profile-pic {
+            width: 170px; height: 170px; border-radius: 50%;
+            border: 5px solid var(--gold);
+            box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+            margin-bottom: 25px; object-fit: cover;
         }
 
-        /* تنسيق عداد الزوار العصري */
-        .counter-box {
-            background: #000; padding: 12px; border-radius: 12px;
-            border: 1px solid #333; margin-top: 20px; display: inline-block;
+        h1 { color: var(--gold); font-size: 32px; margin-bottom: 10px; text-transform: uppercase; }
+        
+        #dhikr-display {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 20px;
+            margin: 25px 0;
+            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 5px solid var(--gold);
         }
-        .counter-box span { color: #00ff41; font-weight: bold; font-size: 0.9em; display: block; margin-bottom: 5px; }
-        .counter-box img { filter: hue-rotate(90deg) brightness(1.5); height: 25px; }
 
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        .btn-interact {
+            background: linear-gradient(45deg, #aa7c11, var(--gold));
+            color: black;
+            border: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 900;
+            cursor: pointer;
+            transition: all 0.4s;
+            width: 100%;
+        }
+
+        .btn-interact:hover { transform: scale(1.03); box-shadow: 0 0 20px var(--gold); }
+
+        .counter-footer {
+            margin-top: 40px;
+            background: #000;
+            padding: 15px;
+            border-radius: 15px;
+            display: inline-block;
+            border: 1px solid #333;
+        }
+
+        @keyframes appear { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
 <body>
 
-    <div class="premium-card">
-        <h1 class="main-title">صدقة جارية</h1>
-        <p class="sub-title">على روح غالينا المرحوم محمود</p>
-
-        <div class="image-container">
-            <img src="mahmoud.jpg" alt="محمود رحمه الله">
-        </div>
-
-        <div class="dua-container">
-            <p class="dua-text">اللهم اغفر له وارحمه واجعل قبره روضة من رياض الجنة واجعل الفردوس الأعلى منزلته.</p>
-        </div>
-
-        <button class="advanced-btn" id="prayBtn" onclick="submitPrayer()">تلاوة الدعاء ونيل الأجر</button>
+    <div class="container">
+        <img src="mahmoud.jpg" class="profile-pic" alt="محمود">
+        <h1>رحم الله محمود</h1>
+        <p style="color: #ccc; margin-bottom: 20px;">اللهم اجعلها صدقة جارية في ميزان حسناته</p>
         
-        <div class="counter-box">
-            <span>عدد الزوار</span>
-            <img src="https://hitcounter.dev/no/SadkaJaryaa.svg" alt="عدد الزوار">
+        <div id="dhikr-display">اضغط للبدء في الدعاء</div>
+        <button class="btn-interact" onclick="nextDhikr()">أذكار ودعاء</button>
+
+        <div class="counter-footer">
+            <p style="color: #555; font-size: 12px; margin-bottom: 5px;">عدد الزوار الكرام</p>
+            <img src="https://hitcounter.dev/no/SadkaJaryaa.svg" style="filter: hue-rotate(90deg) brightness(1.5);">
         </div>
     </div>
 
     <script>
-        function submitPrayer() {
-            const btn = document.getElementById("prayBtn");
-            btn.innerHTML = "✨ تقبل الله منك ✨";
-            btn.style.background = "#2ecc71";
-            btn.style.color = "#fff";
-            btn.disabled = true;
+        const dhikrs = [
+            "اللهم اغفر له وارحمه وعافه واعف عنه",
+            "اللهم اجعل قبره روضة من رياض الجنة",
+            "اللهم أبدله داراً خيراً من داره وأهلاً خيراً من أهله",
+            "اللهم نور مرقده وطيب مضجعه وآنس وحشته",
+            "سُبْحَانَ اللهِ وَبِحَمْدِهِ",
+            "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِيكَ لَهُ"
+        ];
+        let i = 0;
+        function nextDhikr() {
+            const el = document.getElementById('dhikr-display');
+            el.style.opacity = 0;
+            setTimeout(() => {
+                i = (i + 1) % dhikrs.length;
+                el.innerText = dhikrs[i];
+                el.style.opacity = 1;
+            }, 300);
         }
     </script>
-
 </body>
 </html>
