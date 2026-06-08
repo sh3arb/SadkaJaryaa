@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صدقة جارية</title>
+    <title>صدقة جارية لمحمود</title>
     <style>
-        /* تنسيق الخلفية لتكون الكعبة */
         body {
             margin: 0;
             padding: 0;
@@ -14,8 +13,9 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+            font-family: 'Segoe UI', sans-serif;
+            /* خلفية الكعبة مع تعتيم للراحة */
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1542840410-3092f9661150?q=80&w=2000');
             background-size: cover;
             background-position: center;
@@ -24,36 +24,47 @@
         }
 
         .container {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            width: 90%;
-            max-width: 500px;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px 20px;
+            border-radius: 25px;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 85%;
+            max-width: 450px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
 
         img.profile {
-            max-width: 150px;
+            max-width: 160px;
             border-radius: 50%;
-            border: 4px solid #fff;
+            border: 5px solid rgba(255,255,255,0.2);
             margin-bottom: 20px;
         }
 
-        h1 { margin-bottom: 10px; font-size: 24px; }
-        p { font-size: 1.1em; line-height: 1.6; }
+        h1 { font-size: 28px; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        p { font-size: 1.1em; line-height: 1.8; opacity: 0.9; }
 
-        /* تصميم مربع العداد الأسود باللون الأخضر */
+        /* تنسيق عداد الزوار ليكون رقم فقط داخل مربع أسود */
+        .counter-container {
+            margin-top: 30px;
+        }
+        .counter-label { font-size: 0.8em; color: #ccc; margin-bottom: 8px; display: block; }
+        
         .counter-box {
             background-color: #000;
-            padding: 15px 25px;
-            border-radius: 10px;
+            padding: 10px 30px;
+            border-radius: 8px;
             display: inline-block;
-            margin-top: 20px;
             border: 1px solid #333;
+            box-shadow: inset 0 0 10px rgba(0,255,65,0.2);
         }
-        .counter-box p { color: #00ff41; font-weight: bold; margin: 0; font-size: 0.9em; }
-        .counter-box img { display: block; margin: 5px auto 0; filter: hue-rotate(90deg) brightness(1.5); }
+        
+        /* إخفاء أيقونة العداد الأصلية وإظهار الرقم فقط */
+        .counter-box img {
+            display: block;
+            filter: hue-rotate(90deg) brightness(1.2) contrast(2);
+            height: 30px; /* تحكم في حجم الرقم هنا */
+        }
     </style>
 </head>
 <body>
@@ -64,9 +75,11 @@
         <p>اللهم اغفر له وارحمه واجعل قبره روضة من رياض الجنة.</p>
         <p>نسألكم الدعاء له.</p>
 
-        <div class="counter-box">
-            <p>عدد الزوار</p>
-            <img src="https://hitcounter.dev/no/SadkaJaryaa.svg" alt="عدد الزوار">
+        <div class="counter-container">
+            <span class="counter-label">عدد الزوار</span>
+            <div class="counter-box">
+                <img src="https://hitcounter.dev/no/SadkaJaryaa.svg" alt="عدد الزوار">
+            </div>
         </div>
     </div>
 
